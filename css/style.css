@@ -1,0 +1,153 @@
+/*My SCSS*/
+/* General */
+/*use variable*/
+/* line 14, ../scss/style.scss */
+html, body, div, ul, h1, h2, p {
+  margin: 0;
+  padding: 0;
+}
+
+/* line 19, ../scss/style.scss */
+html {
+  height: 100%;
+  overflow: hidden;
+}
+
+/* line 24, ../scss/style.scss */
+body {
+  position: relative;
+  height: 100%;
+  color: #000;
+  background: #fff;
+}
+
+/* line 31, ../scss/style.scss */
+.wrapper {
+  position: relative;
+  margin: 0 auto;
+  z-index: 10001;
+  display: block;
+  padding: 40px;
+  text-align: center;
+}
+
+/* Nav - nested rules */
+/* line 41, ../scss/style.scss */
+.nav {
+  display: block;
+}
+/* line 44, ../scss/style.scss */
+.nav ul {
+  list-style: none;
+  background-color: gray;
+}
+/* line 48, ../scss/style.scss */
+.nav ul li {
+  padding: 20px;
+  display: inline-block;
+}
+/* line 52, ../scss/style.scss */
+.nav ul li a {
+  text-decoration: underline;
+  font-size: 16px;
+  color: white;
+}
+/* line 58, ../scss/style.scss */
+.nav ul li a:hover {
+  text-decoration: none;
+  color: black;
+}
+
+/* Content */
+/* line 70, ../scss/style.scss */
+h1 {
+  font: normal 36px/1.5 "Open Sans", sans-serif;
+  color: #F44336;
+  text-align: center;
+}
+
+/* line 76, ../scss/style.scss */
+div.container {
+  display: block;
+  font: normal 20px/1.5 "Open Sans", sans-serif;
+  background: #fff;
+  box-shadow: 0 0px 3px 5px rgba(15, 15, 15, 0.2);
+  padding: 40px 40px;
+  border: 3px solid #cfcfcf;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+}
+
+/* line 87, ../scss/style.scss */
+div .container p {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+
+/* line 93, ../scss/style.scss */
+.btn {
+  display: block;
+  text-align: center;
+  width: 200px;
+  height: 30px;
+  padding: 10px;
+  color: yellow;
+  background-color: blue;
+  margin: 0 auto;
+  cursor: pointer;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+}
+
+/* line 106, ../scss/style.scss */
+.btn:hover {
+  background-color: yellow;
+  color: #F44336;
+  text-transform: uppercase;
+}
+
+/*use mixin*/
+/* line 119, ../scss/style.scss */
+.small-blue-square {
+  width: 120px;
+  height: 120px;
+  background-color: #00fa2d;
+}
+
+/* line 132, ../scss/style.scss */
+.frame:hover {
+  -webkit-transform: rotate(15deg);
+  /* Ch <36, Saf 5.1+, iOS, An =<4.4.4 */
+  -ms-transform: rotate(15deg);
+  /* IE 9 */
+  transform: rotate(15deg);
+  /* IE 10, Fx 16+, Op 12.1+ */
+}
+
+/*Use extend*/
+/* line 137, ../scss/style.scss */
+.dialog-button, .confirm, .cancel {
+  box-sizing: border-box;
+  color: #ffffff;
+  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
+  padding: 12px 40px;
+  cursor: pointer;
+}
+
+/* line 145, ../scss/style.scss */
+.confirm {
+  background-color: #87bae1;
+}
+
+/* line 150, ../scss/style.scss */
+.cancel {
+  background-color: #e4749e;
+}
+
+/* line 155, ../scss/style.scss */
+.dialog-button:hover, .confirm:hover, .cancel:hover {
+  box-shadow: 0 0 15px 0 rgba(0, 0, 5, 0.3);
+}

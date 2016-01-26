@@ -1,0 +1,157 @@
+/*My SCSS*/
+@import "compass/css3";
+
+/* General */
+
+/*use variable*/
+$blockcenter: 0 auto; 
+$font36: normal 36px/1.5 'Open Sans', sans-serif;
+$font20: normal 20px/1.5 'Open Sans', sans-serif;
+$cool-red: #F44336;
+$cool-yellow: yellow;
+$box-shadow: 0 0px 3px 5px rgba(15, 15, 15, 0.2);
+
+html, body, div, ul, h1, h2, p {
+	margin:0;
+	padding:0;
+}
+
+html {
+	height:100%;
+    overflow: hidden;
+}
+
+body {
+	position:relative;
+	height:100%;
+	color:#000;
+	background:#fff;
+}
+
+.wrapper {
+	position:relative;
+    margin: $blockcenter;
+	z-index: 10001; 
+	display:block;
+    padding: 40px;
+    text-align: center;
+}
+
+/* Nav - nested rules */
+.nav {
+    display: block;
+
+    ul {
+        list-style: none;
+        background-color: gray;
+
+      li {
+        padding: 20px;
+        display: inline-block; 
+
+        a {
+            text-decoration: underline;
+            font-size: 16px;
+            color: white;
+        }
+
+        a:hover {
+            text-decoration: none;
+            color: black;
+        }
+
+      }
+
+    }
+    
+}
+
+/* Content */
+h1 {
+    font: $font36;
+    color: $cool-red;
+    text-align: center;
+}
+
+div.container {
+    display: block;
+    font: $font20;
+    background: #fff;
+    box-shadow: $box-shadow;
+    padding: 40px 40px;
+    border: 3px solid #cfcfcf;
+        @include border-radius(10px);
+    
+}
+
+div .container p {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+.btn {
+    display:block;
+    text-align: center;
+    width: 200px;
+    height: 30px;
+    padding: 10px;
+    color: $cool-yellow;
+    background-color: blue;
+    margin: $blockcenter;
+    cursor: pointer;
+        @include border-radius(10px);
+}
+
+.btn:hover {
+    background-color: yellow;
+    color: $cool-red;
+    text-transform: uppercase;
+}
+
+/*use mixin*/
+@mixin square($size, $color) {
+  width: $size;
+  height: $size;
+  background-color: $color;
+}
+
+.small-blue-square {
+  @include square(120px, rgb(0,250,45));
+}
+
+
+@mixin transform-tilt() {
+  $tilt: rotate(15deg);
+
+  -webkit-transform: $tilt; /* Ch <36, Saf 5.1+, iOS, An =<4.4.4 */
+      -ms-transform: $tilt; /* IE 9 */
+          transform: $tilt; /* IE 10, Fx 16+, Op 12.1+ */
+}
+
+.frame:hover { 
+  @include transform-tilt; 
+}
+
+/*Use extend*/
+.dialog-button {
+  box-sizing: border-box;
+  color: #ffffff;
+  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
+  padding: 12px 40px;
+  cursor: pointer;
+}
+
+.confirm {
+  @extend .dialog-button;
+  background-color: #87bae1;
+}
+
+.cancel {
+  @extend .dialog-button;
+  background-color: #e4749e;
+}
+
+.dialog-button:hover {
+     box-shadow: 0 0 15px 0 rgba(0, 0, 5, 0.3);     
+}
