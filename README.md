@@ -1,6 +1,6 @@
 # SCSS-edu
-My Web Education (SCSS)
+My Web Education (SCSS, Compass)
 
-I practice creating some tamplate use SCSS. It is a fourth template.
+I practice creating some tamplate use SCSS. 
 
-I used technology: Bootstrap4 aplha2, HTML5, CSS3, JS(JQuery), Bower.
+I used technology: SCSS, Compass, CSS3, HTML5.
