@@ -1,24 +1,16 @@
 /*My SCSS*/
 @import "compass/css3";
 
+/* Use Partials */
+@import "_reset";
+@import "_variables";
+
+
 /* General */
-
-/*use variable*/
-$blockcenter: 0 auto; 
-$font36: normal 36px/1.5 'Open Sans', sans-serif;
-$font20: normal 20px/1.5 'Open Sans', sans-serif;
-$cool-red: #F44336;
-$cool-yellow: yellow;
-$box-shadow: 0 0px 3px 5px rgba(15, 15, 15, 0.2);
-
-html, body, div, ul, h1, h2, p {
-	margin:0;
-	padding:0;
-}
-
 html {
-	height:100%;
-    overflow: hidden;
+	height: 100%;
+    min-width: 500px;
+    overflow: visible;
 }
 
 body {
@@ -37,33 +29,55 @@ body {
     text-align: center;
 }
 
+a * {
+	cursor:pointer;
+}
+
+/* Animation */
+/* general animation */
+*{
+	-webkit-transition:all .3s;
+	   -moz-transition:all .3s;
+	     -o-transition:all .3s;
+	        transition:all .3s;
+}
+
+*:before,*:after{
+	-webkit-box-sizing:border-box;
+	   -moz-box-sizing:border-box;
+	        box-sizing:border-box;
+}
+
 /* Nav - nested rules */
 .nav {
-    display: block;
+    text-align: center;
 
     ul {
         list-style: none;
-        background-color: gray;
+        background-color: #2a2525;
 
       li {
-        padding: 20px;
+        padding: 20px 0;
         display: inline-block; 
 
         a {
             text-decoration: underline;
-            font-size: 16px;
+            text-transform: uppercase;
+            font-size: 18px;
             color: white;
+            padding: 20px;
         }
 
         a:hover {
             text-decoration: none;
             color: black;
+            background-color: #fff;
         }
+        
 
       }
 
-    }
-    
+    }   
 }
 
 /* Content */
@@ -111,13 +125,13 @@ div .container p {
 
 /*use mixin*/
 @mixin square($size, $color) {
-  width: $size;
-  height: $size;
-  background-color: $color;
+    width: $size;
+    height: $size;
+    background-color: $color;
 }
 
 .small-blue-square {
-  @include square(120px, rgb(0,250,45));
+    @include square(120px, rgb(0,250,45));
 }
 
 
@@ -130,28 +144,66 @@ div .container p {
 }
 
 .frame:hover { 
-  @include transform-tilt; 
+    @include transform-tilt; 
 }
 
 /*Use extend*/
 .dialog-button {
-  box-sizing: border-box;
-  color: #ffffff;
-  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
-  padding: 12px 40px;
-  cursor: pointer;
+    box-sizing: border-box;
+    color: #ffffff;
+    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
+    padding: 12px 40px;
+    cursor: pointer;
 }
 
 .confirm {
-  @extend .dialog-button;
-  background-color: #87bae1;
+    @extend .dialog-button;
+    background-color: #87bae1;
 }
 
 .cancel {
-  @extend .dialog-button;
-  background-color: #e4749e;
+    @extend .dialog-button;
+    margin-left: 20px;
+    background-color: #e4749e;
 }
 
 .dialog-button:hover {
-     box-shadow: 0 0 15px 0 rgba(0, 0, 5, 0.3);     
+     box-shadow: 0 0 15px 5px rgba(0, 0, 100, 0.3);     
 }
+
+
+/* Footer */
+footer {
+    text-align: center;
+
+    ul {
+        list-style: none;
+        background-color: #6f6767;
+
+      li {
+        padding: 40px;
+        display: inline-block; 
+
+        a {
+            text-decoration: none;
+            text-transform: uppercase;
+            font-size: 14px;
+            color: white;
+        }
+
+        a:hover {
+            text-decoration: underline;
+            color: black;
+        }
+
+      }
+
+    }   
+}
+
+    
+
+
+
+
+

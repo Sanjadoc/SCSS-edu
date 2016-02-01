@@ -1,19 +1,41 @@
 /*My SCSS*/
-/* General */
-/*use variable*/
-/* line 14, ../scss/style.scss */
-html, body, div, ul, h1, h2, p {
+/* Use Partials */
+/* line 1, ../scss/_reset.scss */
+html, body, div, span, object, applet, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, embed, figure {
   margin: 0;
   padding: 0;
+  border: 0;
+  font-size: 100%;
+  vertical-align: baseline;
 }
 
-/* line 19, ../scss/style.scss */
+/* line 9, ../scss/_reset.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 14, ../scss/_reset.scss */
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+/* line 20, ../scss/_reset.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/*Use variable*/
+/* General */
+/* line 10, ../scss/style.scss */
 html {
   height: 100%;
-  overflow: hidden;
+  min-width: 500px;
+  overflow: visible;
 }
 
-/* line 24, ../scss/style.scss */
+/* line 16, ../scss/style.scss */
 body {
   position: relative;
   height: 100%;
@@ -21,7 +43,7 @@ body {
   background: #fff;
 }
 
-/* line 31, ../scss/style.scss */
+/* line 23, ../scss/style.scss */
 .wrapper {
   position: relative;
   margin: 0 auto;
@@ -31,42 +53,67 @@ body {
   text-align: center;
 }
 
-/* Nav - nested rules */
-/* line 41, ../scss/style.scss */
-.nav {
-  display: block;
+/* line 32, ../scss/style.scss */
+a * {
+  cursor: pointer;
 }
-/* line 44, ../scss/style.scss */
+
+/* Animation */
+/* general animation */
+/* line 38, ../scss/style.scss */
+* {
+  -webkit-transition: all .3s;
+  -moz-transition: all .3s;
+  -o-transition: all .3s;
+  transition: all .3s;
+}
+
+/* line 45, ../scss/style.scss */
+*:before, *:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* Nav - nested rules */
+/* line 52, ../scss/style.scss */
+.nav {
+  text-align: center;
+}
+/* line 55, ../scss/style.scss */
 .nav ul {
   list-style: none;
-  background-color: gray;
+  background-color: #2a2525;
 }
-/* line 48, ../scss/style.scss */
+/* line 59, ../scss/style.scss */
 .nav ul li {
-  padding: 20px;
+  padding: 20px 0;
   display: inline-block;
 }
-/* line 52, ../scss/style.scss */
+/* line 63, ../scss/style.scss */
 .nav ul li a {
   text-decoration: underline;
-  font-size: 16px;
+  text-transform: uppercase;
+  font-size: 18px;
   color: white;
+  padding: 20px;
 }
-/* line 58, ../scss/style.scss */
+/* line 71, ../scss/style.scss */
 .nav ul li a:hover {
   text-decoration: none;
   color: black;
+  background-color: #fff;
 }
 
 /* Content */
-/* line 70, ../scss/style.scss */
+/* line 84, ../scss/style.scss */
 h1 {
   font: normal 36px/1.5 "Open Sans", sans-serif;
   color: #F44336;
   text-align: center;
 }
 
-/* line 76, ../scss/style.scss */
+/* line 90, ../scss/style.scss */
 div.container {
   display: block;
   font: normal 20px/1.5 "Open Sans", sans-serif;
@@ -79,14 +126,14 @@ div.container {
   border-radius: 10px;
 }
 
-/* line 87, ../scss/style.scss */
+/* line 101, ../scss/style.scss */
 div .container p {
   margin-top: 20px;
   margin-bottom: 20px;
   text-transform: uppercase;
 }
 
-/* line 93, ../scss/style.scss */
+/* line 107, ../scss/style.scss */
 .btn {
   display: block;
   text-align: center;
@@ -102,7 +149,7 @@ div .container p {
   border-radius: 10px;
 }
 
-/* line 106, ../scss/style.scss */
+/* line 120, ../scss/style.scss */
 .btn:hover {
   background-color: yellow;
   color: #F44336;
@@ -110,14 +157,14 @@ div .container p {
 }
 
 /*use mixin*/
-/* line 119, ../scss/style.scss */
+/* line 133, ../scss/style.scss */
 .small-blue-square {
   width: 120px;
   height: 120px;
   background-color: #00fa2d;
 }
 
-/* line 132, ../scss/style.scss */
+/* line 146, ../scss/style.scss */
 .frame:hover {
   -webkit-transform: rotate(15deg);
   /* Ch <36, Saf 5.1+, iOS, An =<4.4.4 */
@@ -128,7 +175,7 @@ div .container p {
 }
 
 /*Use extend*/
-/* line 137, ../scss/style.scss */
+/* line 151, ../scss/style.scss */
 .dialog-button, .confirm, .cancel {
   box-sizing: border-box;
   color: #ffffff;
@@ -137,17 +184,46 @@ div .container p {
   cursor: pointer;
 }
 
-/* line 145, ../scss/style.scss */
+/* line 159, ../scss/style.scss */
 .confirm {
   background-color: #87bae1;
 }
 
-/* line 150, ../scss/style.scss */
+/* line 164, ../scss/style.scss */
 .cancel {
+  margin-left: 20px;
   background-color: #e4749e;
 }
 
-/* line 155, ../scss/style.scss */
+/* line 170, ../scss/style.scss */
 .dialog-button:hover, .confirm:hover, .cancel:hover {
-  box-shadow: 0 0 15px 0 rgba(0, 0, 5, 0.3);
+  box-shadow: 0 0 15px 5px rgba(0, 0, 100, 0.3);
+}
+
+/* Footer */
+/* line 176, ../scss/style.scss */
+footer {
+  text-align: center;
+}
+/* line 179, ../scss/style.scss */
+footer ul {
+  list-style: none;
+  background-color: #6f6767;
+}
+/* line 183, ../scss/style.scss */
+footer ul li {
+  padding: 40px;
+  display: inline-block;
+}
+/* line 187, ../scss/style.scss */
+footer ul li a {
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 14px;
+  color: white;
+}
+/* line 194, ../scss/style.scss */
+footer ul li a:hover {
+  text-decoration: underline;
+  color: black;
 }
