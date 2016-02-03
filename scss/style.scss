@@ -1,10 +1,5 @@
-/*My SCSS*/
-@import "compass/css3";
-
-/* Use Partials */
-@import "_reset";
-@import "_variables";
-
+// Import copryght
+@import "_importAll";
 
 /* General */
 html {
@@ -17,7 +12,8 @@ body {
 	position:relative;
 	height:100%;
 	color:#000;
-	background:#fff;
+	background:#ababb1;
+    font: $font-standart;
 }
 
 .wrapper {
@@ -33,7 +29,7 @@ a * {
 	cursor:pointer;
 }
 
-/* Animation */
+//Animation
 /* general animation */
 *{
 	-webkit-transition:all .3s;
@@ -48,7 +44,8 @@ a * {
 	        box-sizing:border-box;
 }
 
-/* Nav - nested rules */
+//Nav - nested rules 
+/* Nav */
 .nav {
     text-align: center;
 
@@ -63,17 +60,15 @@ a * {
         a {
             text-decoration: underline;
             text-transform: uppercase;
-            font-size: 18px;
+            font: $font20;
             color: white;
-            padding: 20px;
-        }
-
-        a:hover {
-            text-decoration: none;
-            color: black;
-            background-color: #fff;
-        }
-        
+            padding: 20px 40px;
+             &:hover {
+                color: black;
+                background-color: #fff;
+                text-decoration: none;
+            }
+        }        
 
       }
 
@@ -87,11 +82,12 @@ h1 {
     text-align: center;
 }
 
-div.container {
+div .container {
     display: block;
     font: $font20;
-    background: #fff;
+    background: #ffffff;
     box-shadow: $box-shadow;
+    margin: 20px 0;
     padding: 40px 40px;
     border: 3px solid #cfcfcf;
         @include border-radius(10px);
@@ -115,15 +111,15 @@ div .container p {
     margin: $blockcenter;
     cursor: pointer;
         @include border-radius(10px);
+    
+    &:hover {
+        background-color: yellow;
+        color: $cool-red;
+        text-transform: uppercase;
+    }
 }
 
-.btn:hover {
-    background-color: yellow;
-    color: $cool-red;
-    text-transform: uppercase;
-}
-
-/*use mixin*/
+//use mixin
 @mixin square($size, $color) {
     width: $size;
     height: $size;
@@ -134,20 +130,7 @@ div .container p {
     @include square(120px, rgb(0,250,45));
 }
 
-
-@mixin transform-tilt() {
-  $tilt: rotate(15deg);
-
-  -webkit-transform: $tilt; /* Ch <36, Saf 5.1+, iOS, An =<4.4.4 */
-      -ms-transform: $tilt; /* IE 9 */
-          transform: $tilt; /* IE 10, Fx 16+, Op 12.1+ */
-}
-
-.frame:hover { 
-    @include transform-tilt; 
-}
-
-/*Use extend*/
+//use extend
 .dialog-button {
     box-sizing: border-box;
     color: #ffffff;
@@ -168,7 +151,7 @@ div .container p {
 }
 
 .dialog-button:hover {
-     box-shadow: 0 0 15px 5px rgba(0, 0, 100, 0.3);     
+     box-shadow: 0 0 15px 5px rgba(0, 0, 100, 0.3);    
 }
 
 
@@ -198,7 +181,18 @@ footer {
 
       }
 
-    }   
+    } 
+    
+    .footer-bottom {
+        background-color: #413c3c; 
+        padding: 30px;
+        
+        p {
+            text-decoration: none;
+            font: $font20;
+            color:beige;
+        }
+    }
 }
 
     

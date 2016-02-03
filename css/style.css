@@ -1,5 +1,9 @@
-/*My SCSS*/
-/* Use Partials */
+/*
+    Name: My SCSS
+    Author: Sanjadoc
+    Date: February 2016
+    Version: 1.0
+*/
 /* line 1, ../scss/_reset.scss */
 html, body, div, span, object, applet, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, embed, figure {
   margin: 0;
@@ -26,24 +30,24 @@ table {
   border-spacing: 0;
 }
 
-/*Use variable*/
 /* General */
-/* line 10, ../scss/style.scss */
+/* line 5, ../scss/style.scss */
 html {
   height: 100%;
   min-width: 500px;
   overflow: visible;
 }
 
-/* line 16, ../scss/style.scss */
+/* line 11, ../scss/style.scss */
 body {
   position: relative;
   height: 100%;
   color: #000;
-  background: #fff;
+  background: #ababb1;
+  font: normal 12px/1.5 "Open Sans", sans-serif;
 }
 
-/* line 23, ../scss/style.scss */
+/* line 19, ../scss/style.scss */
 .wrapper {
   position: relative;
   margin: 0 auto;
@@ -53,14 +57,13 @@ body {
   text-align: center;
 }
 
-/* line 32, ../scss/style.scss */
+/* line 28, ../scss/style.scss */
 a * {
   cursor: pointer;
 }
 
-/* Animation */
 /* general animation */
-/* line 38, ../scss/style.scss */
+/* line 34, ../scss/style.scss */
 * {
   -webkit-transition: all .3s;
   -moz-transition: all .3s;
@@ -68,57 +71,58 @@ a * {
   transition: all .3s;
 }
 
-/* line 45, ../scss/style.scss */
+/* line 41, ../scss/style.scss */
 *:before, *:after {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
 
-/* Nav - nested rules */
-/* line 52, ../scss/style.scss */
+/* Nav */
+/* line 49, ../scss/style.scss */
 .nav {
   text-align: center;
 }
-/* line 55, ../scss/style.scss */
+/* line 52, ../scss/style.scss */
 .nav ul {
   list-style: none;
   background-color: #2a2525;
 }
-/* line 59, ../scss/style.scss */
+/* line 56, ../scss/style.scss */
 .nav ul li {
   padding: 20px 0;
   display: inline-block;
 }
-/* line 63, ../scss/style.scss */
+/* line 60, ../scss/style.scss */
 .nav ul li a {
   text-decoration: underline;
   text-transform: uppercase;
-  font-size: 18px;
+  font: normal 20px/1.5 "Open Sans", sans-serif;
   color: white;
-  padding: 20px;
+  padding: 20px 40px;
 }
-/* line 71, ../scss/style.scss */
+/* line 66, ../scss/style.scss */
 .nav ul li a:hover {
-  text-decoration: none;
   color: black;
   background-color: #fff;
+  text-decoration: none;
 }
 
 /* Content */
-/* line 84, ../scss/style.scss */
+/* line 79, ../scss/style.scss */
 h1 {
   font: normal 36px/1.5 "Open Sans", sans-serif;
   color: #F44336;
   text-align: center;
 }
 
-/* line 90, ../scss/style.scss */
-div.container {
+/* line 85, ../scss/style.scss */
+div .container {
   display: block;
   font: normal 20px/1.5 "Open Sans", sans-serif;
-  background: #fff;
+  background: #ffffff;
   box-shadow: 0 0px 3px 5px rgba(15, 15, 15, 0.2);
+  margin: 20px 0;
   padding: 40px 40px;
   border: 3px solid #cfcfcf;
   -moz-border-radius: 10px;
@@ -126,14 +130,14 @@ div.container {
   border-radius: 10px;
 }
 
-/* line 101, ../scss/style.scss */
+/* line 97, ../scss/style.scss */
 div .container p {
   margin-top: 20px;
   margin-bottom: 20px;
   text-transform: uppercase;
 }
 
-/* line 107, ../scss/style.scss */
+/* line 103, ../scss/style.scss */
 .btn {
   display: block;
   text-align: center;
@@ -148,34 +152,21 @@ div .container p {
   -webkit-border-radius: 10px;
   border-radius: 10px;
 }
-
-/* line 120, ../scss/style.scss */
+/* line 115, ../scss/style.scss */
 .btn:hover {
   background-color: yellow;
   color: #F44336;
   text-transform: uppercase;
 }
 
-/*use mixin*/
-/* line 133, ../scss/style.scss */
+/* line 129, ../scss/style.scss */
 .small-blue-square {
   width: 120px;
   height: 120px;
   background-color: #00fa2d;
 }
 
-/* line 146, ../scss/style.scss */
-.frame:hover {
-  -webkit-transform: rotate(15deg);
-  /* Ch <36, Saf 5.1+, iOS, An =<4.4.4 */
-  -ms-transform: rotate(15deg);
-  /* IE 9 */
-  transform: rotate(15deg);
-  /* IE 10, Fx 16+, Op 12.1+ */
-}
-
-/*Use extend*/
-/* line 151, ../scss/style.scss */
+/* line 134, ../scss/style.scss */
 .dialog-button, .confirm, .cancel {
   box-sizing: border-box;
   color: #ffffff;
@@ -184,46 +175,57 @@ div .container p {
   cursor: pointer;
 }
 
-/* line 159, ../scss/style.scss */
+/* line 142, ../scss/style.scss */
 .confirm {
   background-color: #87bae1;
 }
 
-/* line 164, ../scss/style.scss */
+/* line 147, ../scss/style.scss */
 .cancel {
   margin-left: 20px;
   background-color: #e4749e;
 }
 
-/* line 170, ../scss/style.scss */
+/* line 153, ../scss/style.scss */
 .dialog-button:hover, .confirm:hover, .cancel:hover {
   box-shadow: 0 0 15px 5px rgba(0, 0, 100, 0.3);
 }
 
 /* Footer */
-/* line 176, ../scss/style.scss */
+/* line 159, ../scss/style.scss */
 footer {
   text-align: center;
 }
-/* line 179, ../scss/style.scss */
+/* line 162, ../scss/style.scss */
 footer ul {
   list-style: none;
   background-color: #6f6767;
 }
-/* line 183, ../scss/style.scss */
+/* line 166, ../scss/style.scss */
 footer ul li {
   padding: 40px;
   display: inline-block;
 }
-/* line 187, ../scss/style.scss */
+/* line 170, ../scss/style.scss */
 footer ul li a {
   text-decoration: none;
   text-transform: uppercase;
   font-size: 14px;
   color: white;
 }
-/* line 194, ../scss/style.scss */
+/* line 177, ../scss/style.scss */
 footer ul li a:hover {
   text-decoration: underline;
   color: black;
+}
+/* line 186, ../scss/style.scss */
+footer .footer-bottom {
+  background-color: #413c3c;
+  padding: 30px;
+}
+/* line 190, ../scss/style.scss */
+footer .footer-bottom p {
+  text-decoration: none;
+  font: normal 20px/1.5 "Open Sans", sans-serif;
+  color: beige;
 }

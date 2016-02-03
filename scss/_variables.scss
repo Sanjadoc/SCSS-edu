@@ -1,7 +1,13 @@
-/*Use variable*/
+//Use variable
 $blockcenter: 0 auto; 
+$font-standart: normal 12px/1.5 'Open Sans', sans-serif;
 $font36: normal 36px/1.5 'Open Sans', sans-serif;
 $font20: normal 20px/1.5 'Open Sans', sans-serif;
 $cool-red: #F44336;
 $cool-yellow: yellow;
 $box-shadow: 0 0px 3px 5px rgba(15, 15, 15, 0.2);
+
+//My SCSS font mixin
+@mixin font-format($weight, $size, $font) {
+    font: $weight $size $font;
+}
