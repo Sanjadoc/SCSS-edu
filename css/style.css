@@ -2,7 +2,7 @@
     Name: My SCSS
     Author: Sanjadoc
     Date: February 2016
-    Version: 1.0
+    Version: 1.1.1
 */
 /* line 1, ../scss/_reset.scss */
 html, body, div, span, object, applet, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, embed, figure {
@@ -191,41 +191,76 @@ div .container p {
   box-shadow: 0 0 15px 5px rgba(0, 0, 100, 0.3);
 }
 
+/* Variable Arguments */
+/* line 166, ../scss/style.scss */
+.primary {
+  color: #ff0000;
+  background-color: #00ff00;
+  border-color: #0000ff;
+}
+
+/* line 171, ../scss/style.scss */
+.secondary {
+  color: #00ff00;
+  background-color: #0000ff;
+  border-color: #ff0000;
+}
+
+/* line 176, ../scss/style.scss */
+.third {
+  color: #00ff00;
+  background-color: #ff00ff;
+  border-color: #ff0000;
+}
+
 /* Footer */
-/* line 159, ../scss/style.scss */
+/* line 182, ../scss/style.scss */
 footer {
   text-align: center;
 }
-/* line 162, ../scss/style.scss */
+/* line 185, ../scss/style.scss */
 footer ul {
   list-style: none;
   background-color: #6f6767;
 }
-/* line 166, ../scss/style.scss */
+/* line 189, ../scss/style.scss */
 footer ul li {
   padding: 40px;
   display: inline-block;
 }
-/* line 170, ../scss/style.scss */
+/* line 193, ../scss/style.scss */
 footer ul li a {
   text-decoration: none;
   text-transform: uppercase;
   font-size: 14px;
   color: white;
 }
-/* line 177, ../scss/style.scss */
+/* line 200, ../scss/style.scss */
 footer ul li a:hover {
   text-decoration: underline;
   color: black;
 }
-/* line 186, ../scss/style.scss */
+/* line 209, ../scss/style.scss */
 footer .footer-bottom {
   background-color: #413c3c;
   padding: 30px;
 }
-/* line 190, ../scss/style.scss */
+/* line 213, ../scss/style.scss */
 footer .footer-bottom p {
   text-decoration: none;
   font: normal 20px/1.5 "Open Sans", sans-serif;
   color: beige;
+}
+
+/*---------------------------------------------------*/
+/* Variable Scope and Content Blocks */
+/* line 232, ../scss/style.scss */
+.colors {
+  color: white;
+}
+
+/* Function Directives */
+/* line 247, ../scss/style.scss */
+#sidebar {
+  width: 240px;
 }
